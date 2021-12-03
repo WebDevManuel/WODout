@@ -15,6 +15,10 @@
   --color-button-font: #121212;
   --color-font: #fff;
   --font-family: "Roboto", sans-serif;
+  --font-weight-regular: "regular";
+  --font-weight-medium: "medium";
+  --font-size-regular: 2rem;
+  --font-size-medium: 2rem;
 }
 
 body {
@@ -25,8 +29,11 @@ h1,
 h2,
 h3 {
   font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-regular);
 }
 
 p {
   font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
 }

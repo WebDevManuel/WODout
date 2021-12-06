@@ -12,8 +12,8 @@ export const getItem = (key, defaultValue) => {
   return defaultValue;
 };
 
-export const useLocalStorageState = (key, devaultValue) => {
-  const [value, setValue] = useState(getItem(key, devaultValue));
+export const useLocalStorageState = (key, defaultValue) => {
+  const [value, setValue] = useState(getItem(key, defaultValue));
 
   useEffect(() => {
     setItem(key, value);

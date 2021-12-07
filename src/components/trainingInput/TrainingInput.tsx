@@ -22,7 +22,7 @@ function TrainingInput() {
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <label htmlFor="sets">Sets</label>
+      <label className={styles.label} htmlFor="sets">Sets</label>
       <input
         type="number"
         name="sets"

@@ -1,3 +1,30 @@
-label {
+.label {
+  display: block;
   font-family: var(--font-family);
+}
+
+input {
+  width: 4rem;
+}
+
+span {
+  margin: 0 0.3rem;
+}
+
+.button {
+  display: block;
+  padding: 10px;
+  margin-top: 1rem;
+  border: none;
+  background-color: var(--color-button-primary);
+  color: var(--color-button-font);
+  font-size: var(--font-size-regular);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
 }

@@ -1,16 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
-
-/* type DropdownProps = {
-  label: string;
-  idSelect: string;
-  options : OptionProps[];
-};*/
-
-/* type TrainingProbs = {
-  label: string;
-  value: number;
-}; */
+import styles from "./TrainingInput.module.css";
 
 function TrainingInput() {
   const [training, setTraining] = useState({
@@ -32,39 +22,55 @@ function TrainingInput() {
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <label htmlFor="sets">Sets</label>
-      <input
-        type="number"
-        name="sets"
-        id="sets"
-        step="1"
-        min="1"
-        value={training.sets}
-        onChange={handleChange}
-      />
-      <span>X</span>
-      <label htmlFor="reps">Reps</label>
-      <input
-        type="number"
-        name="reps"
-        id="reps"
-        step="1"
-        min="1"
-        value={training.reps}
-        onChange={handleChange}
-      />
-      <span>@</span>
-      <label htmlFor="weights">Weight</label>
-      <input
-        type="number"
-        name="weight"
-        id="weight"
-        step="0.5"
-        min="1"
-        value={training.weight}
-        onChange={handleChange}
-      />
-      <input type="submit" />
+      <div className={styles.flex}>
+        <div>
+          <label className={styles.label} htmlFor="sets">
+            Sets
+          </label>
+          <input
+            className={styles.input}
+            type="number"
+            name="sets"
+            id="sets"
+            step="1"
+            min="1"
+            value={training.sets}
+            onChange={handleChange}
+          />
+        </div>
+        <span>X</span>
+        <div>
+          <label className={styles.label} htmlFor="reps">
+            Reps
+          </label>
+          <input
+            type="number"
+            name="reps"
+            id="reps"
+            step="1"
+            min="1"
+            value={training.reps}
+            onChange={handleChange}
+          />
+        </div>
+        <span>@</span>
+        <div>
+          <label className={styles.label} htmlFor="weights">
+            Weight
+          </label>
+          <input
+            type="number"
+            name="weight"
+            id="weight"
+            step="0.5"
+            min="1"
+            value={training.weight}
+            onChange={handleChange}
+          />
+        </div>
+      </div>
+
+      <input className={styles.button} type="submit" value="ADD UNIT" />
     </form>
   );
 }

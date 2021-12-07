@@ -1,16 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
 
-/* type DropdownProps = {
-  label: string;
-  idSelect: string;
-  options : OptionProps[];
-};*/
-
-/* type TrainingProbs = {
-  label: string;
-  value: number;
-}; */
 
 function TrainingInput() {
   const [training, setTraining] = useState({

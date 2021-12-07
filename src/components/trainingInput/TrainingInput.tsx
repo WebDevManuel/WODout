@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
+import styles from "./TrainingInput.module.css";
 
 
 function TrainingInput() {

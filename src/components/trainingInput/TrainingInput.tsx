@@ -1,23 +1,26 @@
-import React, { ChangeEvent, FormEvent } from "react";
-import { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import styles from "./TrainingInput.module.css";
+import useLocalStorage from "./../../hooks/useLocalStorage";
 
 function TrainingInput() {
-  const [training, setTraining] = useState({
+  const [training, setTraining] = useLocalStorage("trainingJournal", []);
+
+  const [formInput, setFormInput] = useState({
     sets: 1,
     reps: 1,
     weight: 1,
   });
 
   const handleOnSubmit = (event: FormEvent) => {
-    event.preventDefault;
-    console.log(event);
+    event.preventDefault();
+    console.log(training, typeof training);
+    setTraining([...training, formInput]);
   };
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    setTraining({ ...training, [event.target.name]: value });
-    console.log(training);
+    setFormInput({ ...formInput, [event.target.name]: value });
+    console.log(formInput);
   };
 
   return (
@@ -34,7 +37,7 @@ function TrainingInput() {
             id="sets"
             step="1"
             min="1"
-            value={training.sets}
+            value={formInput.sets}
             onChange={handleChange}
           />
         </div>
@@ -49,7 +52,7 @@ function TrainingInput() {
             id="reps"
             step="1"
             min="1"
-            value={training.reps}
+            value={formInput.reps}
             onChange={handleChange}
           />
         </div>
@@ -64,7 +67,7 @@ function TrainingInput() {
             id="weight"
             step="0.5"
             min="1"
-            value={training.weight}
+            value={formInput.weight}
             onChange={handleChange}
           />
         </div>

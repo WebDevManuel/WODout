@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import styles from "./TrainingInput.module.css";
-import useLocalStorage from "./../../hooks/useLocalStorage";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function TrainingInput() {
   const [training, setTraining] = useLocalStorage("trainingJournal", []);

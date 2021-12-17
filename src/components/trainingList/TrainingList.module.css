@@ -1,0 +1,7 @@
+.container {
+  display: block;
+  background-color: var(--color-background-secondary);
+  font-family: var(--font-family);
+  color: var(--color-font);
+  padding: 1rem;
+}

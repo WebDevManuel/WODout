@@ -26,8 +26,12 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
+h2 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-medium);
+}
+
 h3 {
   font-family: var(--font-family);
   font-weight: var(--font-weight-medium);
@@ -37,4 +41,8 @@ h3 {
 p {
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
+}
+
+li {
+  list-style-type: none;
 }
